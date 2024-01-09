@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        'Montreal': ['MontrealRegular'],
+        'Montreal': ['NeueMontrealRegular', 'sans-serif'],
       }
     },
   },
