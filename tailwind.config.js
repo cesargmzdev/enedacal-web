@@ -11,7 +11,8 @@ export default {
     extend: {
       fontFamily:{
         'Montreal': ['NeueMontrealRegular', 'sans-serif'],
-      }
+        'MontrealLight': ['NeueMontrealLight', 'sans-serif'],
+      },
     },
   },
   plugins: [],

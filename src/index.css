@@ -1,4 +1,12 @@
+@import "keep-react/css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "keep-react/css";
+@font-face {
+  font-family: 'NeueMontrealRegular';
+  src: url('/Fonts/NeueMontreal-Regular.otf') format('opentype');
+}
+@font-face{
+  font-family: 'NeueMontrealLight';
+  src: url('/Fonts/NeueMontreal-Light.otf') format('opentype');
+}
