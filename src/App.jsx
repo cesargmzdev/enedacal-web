@@ -5,7 +5,7 @@ import Carousel from './components/MainCarrousel';
 import Menu from './components/Menu';
 
 function App() {
-  let slides = [
+  let images = [
     BERLIN,
     GOM,
     MDM
@@ -15,7 +15,7 @@ function App() {
     <div className='flex flex-col font-Montreal'>
       <Menu />
       <main >
-        <Carousel slides={slides} />
+        <Carousel slides={images} />
       </main>
     </div>
   );

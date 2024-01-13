@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import App from "./App";
-import Information from "./pages/Information";
-import Work from "./pages/Work";
+import Information from "./views/Information";
+import Work from "./views/Work";
 
 const Index = () => {
   return (

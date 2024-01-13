@@ -8,10 +8,12 @@ const Work = () => {
   return (
     <>
       <Menu />
-      <section className="bg-black text-white font-Montreal grid grid-cols-3 p-20 gap-x-10">
+      <section className="bg-black text-white px-8 font-Montreal pt-14 lg:grid lg:grid-cols-3 lg:gap-10">
         <ProjectCard img={BERLIN} title="BERLIN" description="description about berlin" />
         <ProjectCard img={GOM} title="GOM" description="description about GOM" />
         <ProjectCard img={MDM} title="MDM" description="description about MDM" />
+        <ProjectCard img={BERLIN} title="BERLIN" description="description about berlin" />
+        <ProjectCard img={GOM} title="GOM" description="description about GOM" />
         <ProjectCard img={MDM} title="MDM" description="description about MDM" />
       </section>
     </>
