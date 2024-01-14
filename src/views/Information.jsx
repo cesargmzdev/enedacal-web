@@ -1,11 +1,12 @@
 import Menu from "../components/Menu";
 import BERLIN from "../assets/projects/BERLIN.jpg";
+import {motion} from "framer-motion";
 
 const Information = () => {
   return (
-    <>
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
       <Menu />
-      <div className="grid place-items-center p-4 lg:h-screen bg-black text-white px-8 font-Montreal">
+      <main className="grid place-items-center p-4 lg:h-screen bg-black text-white px-8 font-Montreal">
         <div className="flex flex-col lg:flex-row">
           <section className="pt-12 lg:w-full lg:pt-0 lg:flex lg:justify-between lg:flex-col">
             <p className="text-balance text-3xl lg:text-7xl font-MontrealLight">
@@ -28,8 +29,8 @@ const Information = () => {
             </a>
           </section>
         </div>
-      </div>
-    </>
+      </main>
+    </motion.div>
   );
 };
 
