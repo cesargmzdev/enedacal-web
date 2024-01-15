@@ -1,25 +1,24 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/prop-types */
-import {useState, useRef} from "react";
+import PropTypes from 'prop-types';
+import {useState, useRef, useCallback} from "react";
 import {NextButton, PrevButton} from "./subcomponents/CarouselButtons";
 
 const Carousel = ({slides}) => {
   const [current, setCurrent] = useState(0);
   const startTouch = useRef(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrent(current === slides.length - 1 ? 0 : current + 1);
-  };
+  }, [current, slides.length]);
 
-  const previousSlide = () => {
+  const previousSlide = useCallback(() => {
     setCurrent(current === 0 ? slides.length - 1 : current - 1);
-  };
+  }, [current, slides.length]);
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = useCallback((e) => {
     startTouch.current = e.touches[0].clientX;
-  };
+  }, []);
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = useCallback((e) => {
     const endTouch = e.changedTouches[0].clientX;
     const diff = startTouch.current - endTouch;
 
@@ -30,35 +29,34 @@ const Carousel = ({slides}) => {
         previousSlide();
       }
     }
-  };
+  }, [nextSlide, previousSlide]);
 
   return (
     <div className="relative h-screen w-screen overflow-hidden"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}>
       {slides.map((slide, index) => {
+        const length = slides.length;
+        const diff = ((index - current) + length) % length;
         let transformValue = '';
-        if (index === current - 1) {
-          transformValue = 'translate-x-[-100%]';
-          console.log(1);
-        }
-        if (index === current + 1) {
-          transformValue = 'translate-x-[100%]';
-          console.log(2);
-        }
-        if (index === current) {
+        let opacityValue = 0;
+
+        if (diff === 0) {
           transformValue = 'translate-x-0';
-        }
-        if (index > current) {
+          opacityValue = 1; // Slide in the center is visible
+        } else if (diff === 1) {
           transformValue = 'translate-x-[100%]';
-        }
-        if (index < current) {
+        } else if (diff === length - 1) {
           transformValue = 'translate-x-[-100%]';
+        } else {
+          return null; // Don't render this slide
         }
+
         return (
           <div
-            className={`absolute top-0 h-screen w-screen transition-all duration-200 ease-in-out transform ${transformValue}`}
-            key={index}
+            className={`absolute top-0 h-screen w-screen transition-all duration-500 ease-in-out transform ${transformValue}`}
+            style={{opacity: opacityValue}} // Apply the opacity
+            key={slide} // Use slide as key
           >
             <img
               src={slide}
@@ -75,4 +73,9 @@ const Carousel = ({slides}) => {
     </div>
   );
 };
+
+Carousel.propTypes = {
+  slides: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 export default Carousel;
