@@ -66,7 +66,7 @@ const Carousel = ({slides}) => {
           </div>
         );
       })}
-      <div className="absolute top-1/2 flex justify-between p-8 w-full">
+      <div className="">
         <PrevButton onClick={previousSlide} />
         <NextButton onClick={nextSlide} />
       </div>

@@ -10,7 +10,7 @@ const Work = () => {
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}} className="">
       <Menu />
-      <main className="bg-black text-white px-5 font-Montreal pt-14 lg:grid lg:grid-cols-3 lg:gap-10">
+      <main className="bg-black text-white px-5 font-Montreal pt-14 lg:grid lg:grid-cols-3 lg:gap-3">
         <Link to={'/berlin'}>
           <ProjectCard img={BERLIN} title="BERLIN" description="description about berlin" />
         </Link>
