@@ -12,13 +12,22 @@ const Work = () => {
       <Menu />
       <main className="bg-black text-white px-5 font-Montreal pt-14 lg:grid lg:grid-cols-3 lg:gap-3">
         <Link to={'/berlin'}>
-          <ProjectCard img={BERLIN} title="BERLIN" description="description about berlin" />
+          <ProjectCard img={BERLIN} title="BERLIN" />
         </Link>
         <Link to={'/gom'}>
-          <ProjectCard img={GOM} title="GOM" description="description about GOM" />
+          <ProjectCard img={GOM} title="GOM" />
         </Link>
         <Link to={'/mdm'}>
-          <ProjectCard img={MDM} title="MDM" description="description about MDM" />
+          <ProjectCard img={MDM} title="MDM" />
+        </Link>
+        <Link to={'/berlin'}>
+          <ProjectCard img={BERLIN} title="BERLIN" />
+        </Link>
+        <Link to={'/gom'}>
+          <ProjectCard img={GOM} title="GOM" />
+        </Link>
+        <Link to={'/mdm'}>
+          <ProjectCard img={MDM} title="MDM" />
         </Link>
       </main>
     </motion.div>

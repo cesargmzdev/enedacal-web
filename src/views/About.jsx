@@ -1,5 +1,5 @@
 import Menu from "../components/Menu";
-import BERLIN from "../assets/projects/BERLIN.jpg";
+import PORTRAIT from "../assets/Information/portrait.jpg";
 import {motion} from "framer-motion";
 
 const Information = () => {
@@ -8,8 +8,8 @@ const Information = () => {
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
       <Menu />
       <main className="grid place-items-center p-4 lg:h-screen bg-black text-white px-5 font-Montreal">
-        <div className="flex flex-col lg:flex-row">
-          <section className="pt-12 lg:w-full lg:pt-0 lg:flex lg:justify-between lg:flex-col">
+        <div className="flex flex-col lg:flex-row lg:h-4/5">
+          <section className="pt-12  lg:pt-0 lg:flex lg:justify-between lg:flex-col lg:w-2/3">
             <p className="text-balance text-3xl lg:text-6xl font-MontrealLight">
               I AM NICO DACAL, A BERLIN-BASED BRAND & VISUAL DESIGNER WITH A CREATIVE MIND AND A PRAGMATIC APPROACH TO USABILITY ISSUES.
               I ENJOY BRINGING IDEAS TO LIFE.            </p>
@@ -48,8 +48,8 @@ const Information = () => {
                 2016/2020 Madrid</p>
             </p>
           </section>
-          <section className="text-sm lg:w-2/3 lg:pl-14">
-            <img src={BERLIN} alt="profile img" className="h-full" />
+          <section className="text-sm lg:w-1/3 lg lg:pl-14">
+            <img src={PORTRAIT} alt="profile img" className="h-full lg:w-full" />
             <div className="flex justify-between pt-1">
               <a href="https://www.linkedin.com/in/nicolasdacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">LinkedIn</a><br />
               <a href="https://www.instagram.com/ene_dacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">Instagram</a><br />
@@ -58,7 +58,7 @@ const Information = () => {
             </ div>
           </section>
         </div>
-        <p className="mt-5 text-center text-sm lg:absolute lg:bottom-5">Copyright © ${Year} Nicolás Dacal - All rights reserved</p>
+        <p className="mt-3 mb-9 text-center text-sm lg:mb-0 lg:absolute lg:bottom-5">Copyright © {Year} Nicolás Dacal - All rights reserved</p>
       </main>
     </motion.div>
   );
