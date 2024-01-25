@@ -11,6 +11,10 @@ export default {
         'Montreal': ['NeueMontrealRegular', 'sans-serif'],
         'MontrealLight': ['NeueMontrealLight', 'sans-serif'],
       },
+      backgroundImage:{
+        'LeftArrow': "url('/src/assets/LeftArrow.svg')",
+        'RightArrow': "url('/src/assets/RightArrow.svg')",
+      },
     },
   },
 };
