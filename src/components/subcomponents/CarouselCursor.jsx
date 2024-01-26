@@ -23,6 +23,12 @@ const CarouselCursor = ({direction}) => {
     }
   };
 
+  const handleMouseOut = () => {
+    if (cursorRef.current) {
+      cursorRef.current.style.display = 'none';
+    }
+  };
+
   useEffect(() => {
     const animate = () => {
       if (cursorRef.current) {
@@ -34,9 +40,11 @@ const CarouselCursor = ({direction}) => {
     animate();
 
     document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseout', handleMouseOut);
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseout', handleMouseOut);
     };
   }, []);
 
