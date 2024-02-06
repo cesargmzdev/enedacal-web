@@ -3,9 +3,10 @@
 @tailwind utilities;
 @font-face {
   font-family: 'NeueMontrealRegular';
-  src: url('/fonts/Helvetica-Roman.ttf') format('opentype');
+  src: url('/fonts/MonumentGrotesk-Regular.ttf') format('opentype');
 }
-@font-face{
+
+@font-face {
   font-family: 'NeueMontrealLight';
-  src: url('/fonts/Helvetica-Thin.ttf') format('opentype');
+  src: url('/fonts/MonumentGrotesk-Regular.ttf') format('opentype');
 }

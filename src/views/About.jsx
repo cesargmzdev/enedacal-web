@@ -7,7 +7,7 @@ const Information = () => {
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
       <Menu />
-      <main className="grid place-items-center p-4 lg:h-screen bg-black text-white px-5 font-Montreal">
+      <main className="grid place-items-center p-4 lg:h-screen bg-black text-white px-5 py-4 font-Montreal">
         <div className="flex flex-col lg:flex-row lg:h-4/5">
           <section className="pt-12  lg:pt-0 lg:flex lg:justify-between lg:flex-col lg:w-2/3">
             <p className="text-balance text-3xl lg:text-6xl font-MontrealLight">
@@ -26,12 +26,12 @@ const Information = () => {
               </p>
               <p>Brand Designer <br />
                 Brand Designer <br />
-                Jr-Brand Designer <br />
-                Graphic Designer <br />
-                Design Assistant
+                Junior Designer <br />
+                Gr. Designer <br />
+                Design Asst
               </p>
               <p>2023/now Berlin <br />
-                2021/2022 Berlin <br />
+                2021/22 Berlin <br />
                 2020 Madrid <br />
                 2019 Madrid <br />
                 2016 Berlin
