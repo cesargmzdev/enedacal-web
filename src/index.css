@@ -10,3 +10,7 @@
   font-family: 'NeueMontrealLight';
   src: url('/fonts/MonumentGrotesk-Regular.ttf') format('opentype');
 }
+
+html{
+  scrollbar-width: none;
+}

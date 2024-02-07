@@ -5,6 +5,7 @@ import GOM from "../assets/projects/GOM.gif";
 import MDM from "../assets/projects/MDM.gif";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
+import video_test from "../assets/projects/video_test.mp4";
 
 const Work = () => {
   return (
@@ -12,22 +13,22 @@ const Work = () => {
       <Menu />
       <main className="bg-black text-white px-5 font-Montreal pt-32 lg:grid lg:grid-cols-3 lg:gap-3 lg:pt-[7.5rem]">
         <Link to={'/berlin'}>
-          <ProjectCard img={BERLIN} title="BERLIN" />
+          <ProjectCard src={video_test} alt="video" title={'hola'} isVideo={true} />
         </Link>
         <Link to={'/gom'}>
-          <ProjectCard img={GOM} title="GOM" />
+          <ProjectCard src={GOM} title="GOM" />
         </Link>
         <Link to={'/mdm'}>
-          <ProjectCard img={MDM} title="MDM" />
+          <ProjectCard src={MDM} title="MDM" />
         </Link>
         <Link to={'/berlin'}>
-          <ProjectCard img={BERLIN} title="BERLIN" />
+          <ProjectCard src={BERLIN} title="BERLIN" />
         </Link>
         <Link to={'/gom'}>
-          <ProjectCard img={GOM} title="GOM" />
+          <ProjectCard src={GOM} title="GOM" />
         </Link>
         <Link to={'/mdm'}>
-          <ProjectCard img={MDM} title="MDM" />
+          <ProjectCard src={MDM} title="MDM" />
         </Link>
       </main>
     </motion.div>
