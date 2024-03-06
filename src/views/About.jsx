@@ -30,22 +30,22 @@ const Information = () => {
                 Gr. Designer <br />
                 Design Asst
               </p>
-              <p>2023/now Berlin <br />
+              <p>2023/24 Berlin <br />
                 2021/22 Berlin <br />
                 2020 Madrid <br />
                 2019 Madrid <br />
                 2016 Berlin
               </p>
-              <p><a className="hover:text-yellow-500 hover:underline duration-300" href="https://esdmadrid.es/" target="_blank" rel="noopener noreferrer">SHIFTA by ELISAVA
+              <p><a className="hover:text-yellow-500 hover:underline duration-300" href="https://esdmadrid.es/" target="_blank" rel="noopener noreferrer">ELISAVA
               </a> <br />
                 <a className="hover:text-yellow-500 hover:underline duration-300" href="https://weareshifta.com/" target="_blank" rel="noopener noreferrer">E.S.D.
                 </a>
               </p>
-              <p>Master in Branding <br />
-                Bachelor of Arts
+              <p>MA Branding <br />
+                BA Design
               </p>
               <p>2022/23 Online <br />
-                2016/2020 Madrid</p>
+                2016/20 Madrid</p>
             </p>
           </section>
           <section className="text-sm lg:w-1/3 lg lg:pl-14">

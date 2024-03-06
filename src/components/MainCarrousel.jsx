@@ -1,18 +1,39 @@
 import PropTypes from 'prop-types';
-import {useState, useRef, useCallback} from "react";
+import {useState, useRef, useCallback, useEffect} from "react";
 import {NextButton, PrevButton} from "./subcomponents/CarouselButtons";
+
+const VideoSlide = ({src, opacityValue}) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (opacityValue === 1 && videoRef.current) {
+      videoRef.current.load();
+    }
+  }, [opacityValue]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      className="h-full w-full object-cover"
+      autoPlay
+      loop
+      muted
+    />
+  );
+};
 
 const Carousel = ({slides}) => {
   const [current, setCurrent] = useState(0);
   const startTouch = useRef(0);
 
   const nextSlide = useCallback(() => {
-    setCurrent(current === slides.length - 1 ? 0 : current + 1);
-  }, [current, slides.length]);
+    setCurrent(current => current === slides.length - 1 ? 0 : current + 1);
+  }, [slides.length]);
 
   const previousSlide = useCallback(() => {
-    setCurrent(current === 0 ? slides.length - 1 : current - 1);
-  }, [current, slides.length]);
+    setCurrent(current => current === 0 ? slides.length - 1 : current - 1);
+  }, [slides.length]);
 
   const handleTouchStart = useCallback((e) => {
     startTouch.current = e.touches[0].clientX;
@@ -52,19 +73,36 @@ const Carousel = ({slides}) => {
           return null; // Don't render this slide
         }
 
-        return (
-          <div
-            className={`absolute top-0 h-screen w-screen transition-all duration-500 ease-in-out transform ${transformValue}`}
-            style={{opacity: opacityValue}} // Apply the opacity
-            key={slide} // Use slide as key
-          >
-            <img
-              src={slide}
-              alt={`slider-${index}`}
-              className="h-full w-full"
-            />
-          </div>
-        );
+        if (slide.type === 'image') {
+          return (
+            <div
+              className={`absolute top-0 h-screen w-screen transition-all duration-500 ease-in-out transform ${transformValue}`}
+              style={{opacity: opacityValue}} // Apply the opacity
+              key={slide.src} // Use slide src as key
+            >
+              <img
+                src={slide.src}
+                alt={`slider-${index}`}
+                className="h-full w-full"
+              />
+            </div>
+          );
+        } else if (slide.type === 'video') {
+          return (
+            <div
+              className={`absolute top-0 h-screen w-screen transition-all duration-500 ease-in-out transform ${transformValue}`}
+              style={{opacity: opacityValue}} // Apply the opacity
+              key={slide.src} // Use slide src as key
+            >
+              <VideoSlide
+                src={slide.src}
+                opacityValue={opacityValue}
+              />
+            </div>
+          );
+        }
+
+        return null;
       })}
       <div className="">
         <PrevButton onClick={previousSlide} />
@@ -75,7 +113,17 @@ const Carousel = ({slides}) => {
 };
 
 Carousel.propTypes = {
-  slides: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.oneOf(['image', 'video']).isRequired,
+      src: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
+VideoSlide.propTypes = {
+  src: PropTypes.string.isRequired,
+  opacityValue: PropTypes.number.isRequired,
 };
 
 export default Carousel;
