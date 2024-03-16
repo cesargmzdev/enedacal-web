@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {useState, useRef, useCallback, useEffect} from "react";
 import {NextButton, PrevButton} from "./subcomponents/CarouselButtons";
 
-const VideoSlide = ({src, opacityValue}) => {
+const VideoSlide = ({src, opacityValue, className}) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const VideoSlide = ({src, opacityValue}) => {
     <video
       ref={videoRef}
       src={src}
-      className="h-full w-full object-cover"
+      className={className}
       autoPlay
       loop
       muted
@@ -76,27 +76,28 @@ const Carousel = ({slides}) => {
         if (slide.type === 'image') {
           return (
             <div
-              className={`absolute top-0 h-screen w-screen transition-all duration-500 ease-in-out transform ${transformValue}`}
+              className={`absolute top-0 h-dvh w-dvw transition-all duration-500 ease-in-out transform ${transformValue}`}
               style={{opacity: opacityValue}} // Apply the opacity
               key={slide.src} // Use slide src as key
             >
               <img
                 src={slide.src}
                 alt={`slider-${index}`}
-                className="h-full w-full"
+                className={`h-full w-full bg-black ${slide.className}`}
               />
             </div>
           );
         } else if (slide.type === 'video') {
           return (
             <div
-              className={`absolute top-0 h-screen w-screen transition-all duration-500 ease-in-out transform ${transformValue}`}
+              className={`absolute top-0 h-dvh w-dvw transition-all duration-500 ease-in-out transform ${transformValue}`}
               style={{opacity: opacityValue}} // Apply the opacity
               key={slide.src} // Use slide src as key
             >
               <VideoSlide
                 src={slide.src}
                 opacityValue={opacityValue}
+                className={`h-full w-full bg-black ${slide.className}`}
               />
             </div>
           );
@@ -117,6 +118,7 @@ Carousel.propTypes = {
     PropTypes.shape({
       type: PropTypes.oneOf(['image', 'video']).isRequired,
       src: PropTypes.string.isRequired,
+      className: PropTypes.string
     })
   ).isRequired,
 };
@@ -124,6 +126,7 @@ Carousel.propTypes = {
 VideoSlide.propTypes = {
   src: PropTypes.string.isRequired,
   opacityValue: PropTypes.number.isRequired,
+  className: PropTypes.string
 };
 
 export default Carousel;

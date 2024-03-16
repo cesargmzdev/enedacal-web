@@ -1,5 +1,5 @@
 import Menu from "../components/Menu";
-import PORTRAIT from "../assets/Information/portrait.jpg";
+import PORTRAIT from "../assets/about/portrait.jpg";
 import {motion} from "framer-motion";
 
 const Information = () => {
