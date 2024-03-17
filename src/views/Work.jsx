@@ -2,35 +2,35 @@ import Menu from "../components/Menu";
 import ProjectCard from "../components/ProjectCard";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
-import BLN from "../assets/projects/Desktop/BLN/BLN_home_anim.mp4";
-import GOM from "../assets/projects/Desktop/GOM/GOM_home.gif";
-import MDM from "../assets/projects/Desktop/MDM/MDM_home.gif";
-import MOML from "../assets/projects/Desktop/MOML/knom.mp4";
-import RUKATYPE from "../assets/projects/Desktop/RUKATYPE/RUKATYPE_home.jpg";
-import SCHALTBAU from "../assets/projects/Desktop/SCHALTBAU/SB_home.png";
+import BLN from "../assets/projects/Mobile/BLN/BLN_anim_work.mp4";
+import GOM from "../assets/projects/Mobile/GOM/GOM_work.gif";
+import MDM from "../assets/projects/Mobile/MDM/m_proyecto_work.gif";
+import MOML from "../assets/projects/Mobile/MOML/MOML_anim.mp4";
+import RUKATYPE from "../assets/projects/Mobile/RUKATYPE/RUKATYPE_work.png";
+import SCHALTBAU from "../assets/projects/Mobile/SCHALTBAU/SB_work.png";
 
 const Work = () => {
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
       <Menu />
-      <main className="bg-black text-white px-5 font-Montreal pt-32 lg:grid lg:grid-cols-3 lg:gap-3 lg:pt-[7.5rem]">
+      <main className="bg-black text-white px-5 font-Montreal pt-20 lg:grid lg:grid-cols-3 lg:gap-3 lg:pt-[7.5rem]">
         <Link to={'/bln'}>
           <ProjectCard src={BLN} alt="BLN Project" title="BLN" isVideo={true} />
         </Link>
         <Link to={'/gom'}>
-          <ProjectCard src={GOM} alt="GOM Project" title="GOM" />
+          <ProjectCard src={GOM} alt="GOM Project" title="GOM (PPI)" />
         </Link>
         <Link to={'/mdm'}>
           <ProjectCard src={MDM} alt="MDM Project" title="MDM" />
         </Link>
         <Link to={'/moml'}>
-          <ProjectCard src={MOML} alt="MOML Project" title="MOML" isVideo={true} />
+          <ProjectCard src={MOML} alt="MOML Project" title="MOML (KNOM)" isVideo={true} />
         </Link>
         <Link to={'/rukatype'}>
           <ProjectCard src={RUKATYPE} alt="RUKATYPE" title="RUKATYPE" />
         </Link>
         <Link to={'/schaltbau'}>
-          <ProjectCard src={SCHALTBAU} alt="SCHALTBAU Project" title="SCHALTBAU" />
+          <ProjectCard src={SCHALTBAU} alt="SCHALTBAU Project" title="SCHALTBAU (WHYBRAND)" />
         </Link>
       </main>
     </motion.div>

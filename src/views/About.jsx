@@ -12,7 +12,7 @@ const Information = () => {
           <section className="pt-12  lg:pt-0 lg:flex lg:justify-between lg:flex-col lg:w-2/3">
             <p className="text-balance text-3xl lg:text-6xl font-MontrealLight">
               I AM NICO DACAL, A BERLIN-BASED BRAND & VISUAL DESIGNER WITH A CREATIVE MIND AND A PRAGMATIC APPROACH TO USABILITY ISSUES.
-              I ENJOY BRINGING IDEAS TO LIFE.            </p>
+              I ENJOY BRINGING IDEAS TO LIFE.</p>
             <p className="grid grid-cols-3 grid-rows-2 mt-6 gap-6 text-sm text-pretty lg:gap-20 lg:mt-36">
               <p><a href="https://whybrand.com/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline">WHYBRAND</a><br />
                 <a className="hover:text-yellow-500 hover:underline duration-300" href="https://www.privatepier.com/" target="_blank" rel="noopener noreferrer">P.P.I.
@@ -52,6 +52,7 @@ const Information = () => {
             <img src={PORTRAIT} alt="profile img" className="h-full lg:w-full" />
             <div className="flex justify-between pt-1">
               <a href="https://www.linkedin.com/in/nicolasdacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">LinkedIn</a><br />
+              <a href="src\assets\about\CV_24.pdf" target="_blank" className="hover:text-yellow-500 hover:underline duration-300">CV</a><br />
               <a href="https://www.instagram.com/ene_dacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">Instagram</a><br />
               <a href="mailto:nicodacalgomez@gmail.com" className="hover:text-yellow-500 hover:underline duration-300">Mail
               </a>

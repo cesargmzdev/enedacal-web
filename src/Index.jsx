@@ -12,12 +12,12 @@ const Index = () => {
         <Route path='/home' element={<App />} />
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
-        <Route path="/bln" element={<Project project="bln"/>} />
-        <Route path="/gom" element={<Project project="gom"/>} />
-        {/* <Route path="/mdm" element={<Project />} />
-        <Route path="/moml" element={<Project />} />
-        <Route path="/rukatype" element={<Project />} />
-        <Route path="/schaltbau" element={<Project />} /> */}
+        <Route path="/bln" element={<Project project="bln" />} />
+        <Route path="/gom" element={<Project project="gom" />} />
+        <Route path="/mdm" element={<Project project="mdm" />} />
+        <Route path="/moml" element={<Project project="moml" />} />
+        <Route path="/rukatype" element={<Project project="rukatype" />} />
+        <Route path="/schaltbau" element={<Project project="schaltbau" />} />
       </Routes>
     </BrowserRouter>
   );

@@ -5,18 +5,18 @@ const ProjectCard = (props) => {
   if (props.isVideo === true) {
     return (
       <article className={`flex flex-col pb-16`}>
-        <video src={props.src} alt={`project ${props.alt}`} className='lg:max-h-[45dvh]' autoPlay loop muted />
+        <video src={props.src} alt={`project ${props.alt}`} autoPlay loop muted />
         <footer className='flex flex-col font-MontrealLight pt-1'>
-          <span className='underline'>{props.title}</span>
+          <span>{props.title}</span>
         </footer>
       </article>
     );
   } else {
     return (
       <article className={`flex flex-col pb-16`}>
-        <img src={props.src} alt={`project ${props.alt}`} className='lg:max-h-[45dvh]' />
+        <img src={props.src} alt={`project ${props.alt}`} />
         <footer className='flex flex-col font-MontrealLight pt-1'>
-          <span className='underline'>{props.title}</span>
+          <span>{props.title}</span>
         </footer>
       </article>
     );

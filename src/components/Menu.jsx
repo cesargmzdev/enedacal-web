@@ -2,17 +2,17 @@ import {Link} from 'react-router-dom';
 
 const Menu = () => {
   return (
-    <>
-      <Link className='text-white p-5 z-50 fixed top-0 text-base mix-blend-difference' to={'/'}>
+    <div className='fixed w-full flex justify-between z-50 mix-blend-difference'>
+      <Link className='text-white p-5 text-base' to={'/'}>
         <strong className='font-Montreal'>ENEDACAL</strong>
       </Link>
-      <Link className='text-white p-5 z-50 fixed top-0 right-0 text-base mix-blend-difference' to={'/about'}>
-        <strong className='font-Montreal'>ABOUT</strong>
-      </Link >
-      <Link to={'/work'} className='text-white p-5 z-50 fixed bottom-0 text-base mix-blend-difference'>
+      <Link to={'/work'} className='text-white p-5 text-base'>
         <strong className='font-Montreal'>WORK</strong>
       </Link>
-    </>
+      <Link className='text-white p-5 text-base' to={'/about'}>
+        <strong className='font-Montreal'>ABOUT</strong>
+      </Link >
+    </div>
   );
 };
 
