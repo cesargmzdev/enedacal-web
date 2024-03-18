@@ -1,19 +1,19 @@
 import Menu from "../components/Menu";
-import PORTRAIT from "../assets/about/portrait.jpg";
+import PORTRAIT from "../assets/about/foto_about.jpg";
 import {motion} from "framer-motion";
+import Footer from "../components/Footer";
 
 const Information = () => {
-  const Year = new Date().getFullYear();
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
       <Menu />
-      <main className="grid place-items-center p-4 lg:h-screen bg-black text-white px-5 py-4 font-Montreal">
-        <div className="flex flex-col lg:flex-row lg:h-4/5">
-          <section className="pt-12  lg:pt-0 lg:flex lg:justify-between lg:flex-col lg:w-2/3">
-            <p className="text-balance text-3xl lg:text-6xl font-MontrealLight">
-              I AM NICO DACAL, A BERLIN-BASED BRAND & VISUAL DESIGNER WITH A CREATIVE MIND AND A PRAGMATIC APPROACH TO USABILITY ISSUES.
+      <main className="grid place-items-center p-4 bg-black text-white px-5 py-4 font-Montreal lg:pt-20 xl:pt-32">
+        <div className="flex flex-col lg:flex-row">
+          <section className="pt-12 lg:pt-0 lg:flex lg:justify-between lg:flex-col lg:w-2/3">
+            <p className="text-balance text-3xl lg:text-5xl xl:text-6xl font-MontrealLight">
+              I AM NICO DACAL, A BERLIN-BASED BRAND & VISUAL DESIGNER WITH A CREATIVE MIND AND A PRAGMATIC APPROACH TO USABILITY ISSUES.<br />
               I ENJOY BRINGING IDEAS TO LIFE.</p>
-            <p className="grid grid-cols-3 grid-rows-2 mt-6 gap-6 text-sm text-pretty lg:gap-20 lg:mt-36">
+            <article className="grid grid-cols-3 grid-rows-2 mt-6 gap-6 text-sm text-pretty lg:gap-20 lg:mt-36">
               <p><a href="https://whybrand.com/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline">WHYBRAND</a><br />
                 <a className="hover:text-yellow-500 hover:underline duration-300" href="https://www.privatepier.com/" target="_blank" rel="noopener noreferrer">P.P.I.
                 </a> <br />
@@ -46,20 +46,20 @@ const Information = () => {
               </p>
               <p>2022/23 Online <br />
                 2016/20 Madrid</p>
-            </p>
+            </article>
           </section>
-          <section className="text-sm lg:w-1/3 lg lg:pl-14">
-            <img src={PORTRAIT} alt="profile img" className="h-full lg:w-full" />
-            <div className="flex justify-between pt-1">
+          <section className="text-sm lg:w-1/3 lg:pl-14 lg:pt-8">
+            <img src={PORTRAIT} alt="profile img" />
+            <div className="flex justify-between pt-1 text-2xl lg:text-base">
               <a href="https://www.linkedin.com/in/nicolasdacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">LinkedIn</a><br />
               <a href="src\assets\about\CV_24.pdf" target="_blank" className="hover:text-yellow-500 hover:underline duration-300">CV</a><br />
-              <a href="https://www.instagram.com/ene_dacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">Instagram</a><br />
+              <a href="https://www.instagram.com/ene_dacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">IG</a><br />
               <a href="mailto:nicodacalgomez@gmail.com" className="hover:text-yellow-500 hover:underline duration-300">Mail
               </a>
             </ div>
           </section>
         </div>
-        <p className="mt-3 mb-9 text-center text-sm lg:mb-0 lg:absolute lg:bottom-5">Copyright © {Year} Nicolás Dacal - All rights reserved</p>
+        <Footer classNames="pb-9 pt-24 lg:pt-0" />
       </main>
     </motion.div>
   );

@@ -76,7 +76,7 @@ const Carousel = ({slides}) => {
         if (slide.type === 'image') {
           return (
             <div
-              className={`absolute top-0 h-dvh w-dvw transition-all duration-500 ease-in-out transform ${transformValue}`}
+              className={`absolute top-0 h-dvh w-dvw max-w-screen-2xl transition-all duration-500 ease-in-out transform ${transformValue}`}
               style={{opacity: opacityValue}} // Apply the opacity
               key={slide.src} // Use slide src as key
             >
@@ -90,7 +90,7 @@ const Carousel = ({slides}) => {
         } else if (slide.type === 'video') {
           return (
             <div
-              className={`absolute top-0 h-dvh w-dvw transition-all duration-500 ease-in-out transform ${transformValue}`}
+              className={`absolute top-0 h-dvh w-dvw max-w-screen-2xl transition-all duration-500 ease-in-out transform ${transformValue}`}
               style={{opacity: opacityValue}} // Apply the opacity
               key={slide.src} // Use slide src as key
             >
@@ -105,7 +105,7 @@ const Carousel = ({slides}) => {
 
         return null;
       })}
-      <div className="">
+      <div>
         <PrevButton onClick={previousSlide} />
         <NextButton onClick={nextSlide} />
       </div>

@@ -11,7 +11,10 @@ const CarouselCursor = ({direction}) => {
 
   const handleMouseMove = (event) => {
     const cursorStyle = window.getComputedStyle(event.target).cursor;
-    if (isMobileDevice() || cursorStyle === 'pointer') {
+    const windowWidth = window.innerWidth;
+    const marginSize = Math.max(0, (windowWidth - 1536) / 2); // Calcula el tamaño del margen
+
+    if (isMobileDevice() || cursorStyle === 'pointer' || event.pageX < marginSize || event.pageX > windowWidth - marginSize) {
       if (cursorRef.current) {
         cursorRef.current.style.display = 'none';
       }

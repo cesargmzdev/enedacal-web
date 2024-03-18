@@ -7,7 +7,7 @@ const ProjectCard = (props) => {
       <article className={`flex flex-col pb-16`}>
         <video src={props.src} alt={`project ${props.alt}`} autoPlay loop muted />
         <footer className='flex flex-col font-MontrealLight pt-1'>
-          <span>{props.title}</span>
+          <span className='text-2xl md:text-base hover:text-yellow-500 hover:underline duration-300'>{props.title}</span>
         </footer>
       </article>
     );
@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
       <article className={`flex flex-col pb-16`}>
         <img src={props.src} alt={`project ${props.alt}`} />
         <footer className='flex flex-col font-MontrealLight pt-1'>
-          <span>{props.title}</span>
+          <span className='text-2xl md:text-base hover:text-yellow-500 hover:underline duration-300'>{props.title}</span>
         </footer>
       </article>
     );

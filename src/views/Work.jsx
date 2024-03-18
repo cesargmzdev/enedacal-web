@@ -8,6 +8,7 @@ import MDM from "../assets/projects/Mobile/MDM/m_proyecto_work.gif";
 import MOML from "../assets/projects/Mobile/MOML/MOML_anim.mp4";
 import RUKATYPE from "../assets/projects/Mobile/RUKATYPE/RUKATYPE_work.png";
 import SCHALTBAU from "../assets/projects/Mobile/SCHALTBAU/SB_work.png";
+import Footer from "../components/Footer";
 
 const Work = () => {
   return (
@@ -21,7 +22,7 @@ const Work = () => {
           <ProjectCard src={GOM} alt="GOM Project" title="GOM (PPI)" />
         </Link>
         <Link to={'/mdm'}>
-          <ProjectCard src={MDM} alt="MDM Project" title="MDM" />
+          <ProjectCard src={MDM} alt="MDM Project" title="MADM" />
         </Link>
         <Link to={'/moml'}>
           <ProjectCard src={MOML} alt="MOML Project" title="MOML (KNOM)" isVideo={true} />
@@ -33,6 +34,7 @@ const Work = () => {
           <ProjectCard src={SCHALTBAU} alt="SCHALTBAU Project" title="SCHALTBAU (WHYBRAND)" />
         </Link>
       </main>
+      <Footer classNames="pt-9 pb-9" />
     </motion.div>
   );
 };

@@ -12,7 +12,7 @@ import Carousel from './components/MainCarrousel';
 import Menu from './components/Menu';
 import {motion} from "framer-motion";
 import CarouselCursor from "./components/subcomponents/CarouselCursor";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 
 const App = () => {
   const isMobileDevice = () => {
@@ -39,7 +39,6 @@ const App = () => {
   };
 
   const [direction, setDirection] = useState('');
-  const sectionRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -54,10 +53,10 @@ const App = () => {
   }, []);
 
   return (
-    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}} className='flex flex-col font-Montreal'>
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
       <Menu />
-      <main ref={sectionRef}>
-        <CarouselCursor direction={direction} parentRef={sectionRef} isVisible={true} />
+      <main>
+        <CarouselCursor direction={direction} isVisible={true} />
         <Carousel slides={isMobileDevice()} />
       </main>
     </motion.div>

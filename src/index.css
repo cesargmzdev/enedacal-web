@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: 'NeueMontrealRegular';
   src: url('/fonts/MonumentGrotesk-Regular.ttf') format('opentype');
@@ -11,6 +12,18 @@
   src: url('/fonts/MonumentGrotesk-Regular.ttf') format('opentype');
 }
 
-html{
+html {
   scrollbar-width: none;
+}
+
+@media (min-width: 1536px) {
+  body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  }
+
+  #root {
+    max-width: 1536px;
+  }
 }
