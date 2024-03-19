@@ -1,9 +1,9 @@
 import Menu from "../components/Menu";
-import PORTRAIT from "../assets/about/foto_about.jpg";
+import PORTRAIT from "../assets/about/foto_about.webp";
 import {motion} from "framer-motion";
 import Footer from "../components/Footer";
 
-const Information = () => {
+const About = () => {
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
       <Menu />
@@ -59,10 +59,10 @@ const Information = () => {
             </ div>
           </section>
         </div>
-        <Footer classNames="pb-9 pt-24 lg:pt-0" />
       </main>
+      <Footer classNames="pb-9 pt-24 lg:pt-0 xl:pt-24" />
     </motion.div>
   );
 };
 
-export default Information;
+export default About;

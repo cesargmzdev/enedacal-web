@@ -1,13 +1,3 @@
-import BLN_desktop from './assets/projects/Desktop/BLN/BLN_home_anim.mp4';
-import GOM_desktop from './assets/projects/Desktop/GOM/GOM_home.gif';
-import MDM_desktop from './assets/projects/Desktop/MDM/MDM_home.gif';
-import MOML_desktop from './assets/projects/Desktop/MOML/knom.mp4';
-import RUKATYPE_desktop from './assets/projects/Desktop/RUKATYPE/RUKATYPE_home.jpg';
-import BLN_mobile from "./assets/projects/Mobile/BLN/BLN_anim_work.mp4";
-import GOM_mobile from "./assets/projects/Mobile/GOM/GOM_work.gif";
-import MDM_mobile from "./assets/projects/Mobile/MDM/m_proyecto_work.gif";
-import MOML_mobile from "./assets/projects/Mobile/MOML/knom.mp4";
-import RUKATYPE_mobile from "./assets/projects/Mobile/RUKATYPE/RUKATYPE_work.png";
 import Carousel from './components/MainCarrousel';
 import Menu from './components/Menu';
 import {motion} from "framer-motion";
@@ -15,30 +5,45 @@ import CarouselCursor from "./components/subcomponents/CarouselCursor";
 import {useEffect, useState} from "react";
 
 const App = () => {
-  const isMobileDevice = () => {
+  const [direction, setDirection] = useState('');
+  const [slides, setSlides] = useState([]);
+
+  const isMobileDevice = async () => {
     const isMobile = window.innerWidth < 768;
-    const slides = [
-      {type: 'video', src: BLN_desktop, className: "object-cover"},
-      {type: 'image', src: GOM_desktop, className: "object-cover"},
-      {type: 'image', src: MDM_desktop, className: "object-cover"},
-      {type: 'video', src: MOML_desktop},
-      {type: 'image', src: RUKATYPE_desktop, className: "object-cover"}
-    ];
-    const mobileSlides = [
-      {type: 'video', src: BLN_mobile, className: "object-cover"},
-      {type: 'image', src: GOM_mobile, className: "object-cover"},
-      {type: 'image', src: MDM_mobile, className: "object-cover"},
-      {type: 'video', src: MOML_mobile},
-      {type: 'image', src: RUKATYPE_mobile, className: "object-cover"}
-    ];
+    let slides;
     if (isMobile) {
-      return mobileSlides;
+      const {default: BLN_mobile} = await import("./assets/projects/Mobile/BLN/BLN_anim_work.mp4");
+      const {default: GOM_mobile} = await import("./assets/projects/Mobile/GOM/GOM_work.gif");
+      const {default: MDM_mobile} = await import("./assets/projects/Mobile/MDM/m_proyecto_work.gif");
+      const {default: MOML_mobile} = await import("./assets/projects/Mobile/MOML/knom.mp4");
+      const {default: RUKATYPE_mobile} = await import("./assets/projects/Mobile/RUKATYPE/RUKATYPE_work.webp");
+      slides = [
+        {type: 'video', src: BLN_mobile, className: "object-cover"},
+        {type: 'image', src: GOM_mobile, className: "object-cover"},
+        {type: 'image', src: MDM_mobile, className: "object-cover"},
+        {type: 'video', src: MOML_mobile},
+        {type: 'image', src: RUKATYPE_mobile, className: "object-cover"}
+      ];
     } else {
-      return slides;
+      const {default: BLN_desktop} = await import('./assets/projects/Desktop/BLN/BLN_home_anim.mp4');
+      const {default: GOM_desktop} = await import('./assets/projects/Desktop/GOM/GOM_home.gif');
+      const {default: MDM_desktop} = await import('./assets/projects/Desktop/MDM/MDM_home.gif');
+      const {default: MOML_desktop} = await import('./assets/projects/Desktop/MOML/knom.mp4');
+      const {default: RUKATYPE_desktop} = await import('./assets/projects/Desktop/RUKATYPE/RUKATYPE_home.webp');
+      slides = [
+        {type: 'video', src: BLN_desktop, className: "object-cover"},
+        {type: 'image', src: GOM_desktop, className: "object-cover"},
+        {type: 'image', src: MDM_desktop, className: "object-cover"},
+        {type: 'video', src: MOML_desktop},
+        {type: 'image', src: RUKATYPE_desktop, className: "object-cover"}
+      ];
     }
+    setSlides(slides);
   };
 
-  const [direction, setDirection] = useState('');
+  useEffect(() => {
+    isMobileDevice();
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -57,7 +62,7 @@ const App = () => {
       <Menu />
       <main>
         <CarouselCursor direction={direction} isVisible={true} />
-        <Carousel slides={isMobileDevice()} />
+        <Carousel slides={slides} />
       </main>
     </motion.div>
   );
