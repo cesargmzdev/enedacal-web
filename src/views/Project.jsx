@@ -16,13 +16,12 @@ import GOM_4 from "../assets/projects/Desktop/GOM/GOM_4.webp";
 import GOM_5 from "../assets/projects/Desktop/GOM/GOM_5.webp";
 import GOM_6 from "../assets/projects/Desktop/GOM/GOM_6.webp";
 import GOM_7 from "../assets/projects/Desktop/GOM/GOM_7.webp";
-import MDM_HOME from "../assets/projects/Desktop/MDM/MDM_home.gif";
-import M0 from "../assets/projects/Desktop/MDM/m_proyecto0.webp";
-import M1 from "../assets/projects/Desktop/MDM/m_proyecto1.webp";
-import M2 from "../assets/projects/Desktop/MDM/m_proyecto2.webp";
-import M3 from "../assets/projects/Desktop/MDM/m_proyecto3.webp";
-import M4 from "../assets/projects/Desktop/MDM/m_proyecto4.webp";
-import M5 from "../assets/projects/Desktop/MDM/m_proyecto5.webp";
+import CATA0 from "../assets/projects/Desktop/CATA/cata0.webp";
+import CATA1 from "../assets/projects/Desktop/CATA/cata1.webp";
+import CATA2 from "../assets/projects/Desktop/CATA/cata2.webp";
+import CATA3 from "../assets/projects/Desktop/CATA/cata3.webp";
+import CATA4 from "../assets/projects/Desktop/CATA/cata4.webp";
+import CATA5 from "../assets/projects/Desktop/CATA/cata5.webp";
 import MOML from "../assets/projects/Desktop/MOML/knom.mp4";
 import RUKATYPE1 from "../assets/projects/Mobile/RUKATYPE/rukaflag.webp";
 import RUKATYPE from "../assets/projects/Desktop/RUKATYPE/RUKATYPE_home.webp";
@@ -57,9 +56,11 @@ const getProjectProps = (project) => {
     case "gom":
       return {
         title: "GOM",
-        description: (<>
-          &quot;Always a leader, never a follower&quot; is being the claim and the spirit of Grace O´ Malley, the female irish pirate who inspired this irish whiskey.  During my time at the PPI E-Commerce team, I was the most time responsible for the packaging and digital campaigns. This Packaging project was designed for a special edition. Check {link("https://graceomalleywhiskey.com/", "Grace O´ Malley")}.
-        </>),
+        description: (
+          <>
+            &quot;Always a leader, never a follower&quot; is being the claim and the spirit of Grace O´ Malley, the female irish pirate who inspired this irish whiskey.  During my time at the PPI E-Commerce team, I was the most time responsible for the packaging and digital campaigns. This Packaging project was designed for a special edition. Check {link("https://graceomalleywhiskey.com/", "Grace O´ Malley")}.
+          </>
+        ),
         src: [
           {type: 'image', src: GOM},
           {type: 'image', src: GOM_2},
@@ -72,37 +73,42 @@ const getProjectProps = (project) => {
       };
 
 
-    case "mdm":
+    case "cata":
       return {
-        title: "MADM",
-        description: (<>
-          Rebrand proposal for Museo de Artes Decoraticas de Madrid. <br /> Collab with {link("https://www.behance.net/elejuarez", "Luis Miguel Juárez")}.
-        </>
+        title: "CATA LA LATA (BANCO SABADELL)",
+        description: (
+          <>
+            Design and packaging finalist for the 2020 annual contest of Anfaco and Sabadell for the packaging of the cans used in the campaign to promote the consumption of canned fish and seafood {link("https://catalalata.com/", "Cata La Lata")}.
+          </>
         ),
         src: [
-          {type: 'image', src: MDM_HOME},
-          {type: 'image', src: M0},
-          {type: 'image', src: M1},
-          {type: 'image', src: M2},
-          {type: 'image', src: M3},
-          {type: 'image', src: M4},
-          {type: 'image', src: M5}
+          {type: 'image', src: CATA0},
+          {type: 'image', src: CATA1},
+          {type: 'image', src: CATA2},
+          {type: 'image', src: CATA3},
+          {type: 'image', src: CATA4},
+          {type: 'image', src: CATA5}
         ]
       };
     case "moml":
       return {
         title: "MOML",
         description: (
-          <>Motion project for {link("https://knomcreative.com/work/madrid-otra-mirada-literaria-en", "Knom")}. My role was basically the motion part, animating the static concept giving some dynamism to the original idea. The visual concept revolved around a letter M (Madrid - Mirada) created from the way the spines of the books rest on the shelves. An iconic element that captures the essence of the event, linking architecture and literature, and that takes different color combinations depending on the graphic application.</>),
+          <>
+            Motion project for {link("https://knomcreative.com/work/madrid-otra-mirada-literaria-en", "Knom")}. My role was basically the motion part, animating the static concept giving some dynamism to the original idea. The visual concept revolved around a letter M (Madrid - Mirada) created from the way the spines of the books rest on the shelves. An iconic element that captures the essence of the event, linking architecture and literature, and that takes different color combinations depending on the graphic application.
+          </>
+        ),
         src: [
-          {type: 'video', src: MOML}
+          {type: 'video', src: MOML, className: "h-screen"}
         ]
       };
     case "rukatype":
       return {
         title: "RUKATYPE",
         description: (
-          <>Rukatype is a typography that highlights the culture and symbology of the Mapuche people. This typography generates some mosaics and patterns that offer a journey to the origin of the mapuche visual culture. Check the {link("https://rukatype.com/", "main project")}.</>
+          <>
+            Rukatype is a typography that highlights the culture and symbology of the Mapuche people. This typography generates some mosaics and patterns that offer a journey to the origin of the mapuche visual culture. Check the {link("https://rukatype.com/", "main project")}.
+          </>
         ),
         src: [
           {type: 'image', src: RUKATYPE},
@@ -112,7 +118,9 @@ const getProjectProps = (project) => {
     case "schaltbau":
       return {
         title: "SCHALTBAU",
-        description: (<>During my time in Whybrand, I was involved in the Schaltbau rebranding project, being responsible and working hand by hand with the strategy- team on the visual identity.Innovation, high - quality and reliability where the three pillars on which the values and purposes of this industrial company are based. Check the rebrand on the {link("https://news.schaltbau.com/schaltbau-launches-sub-brand-for-growth-markets-energy-and-e-mobility", "schaltbau website")}.</>
+        description: (<>
+          During my time in {link("https://whybrand.com/", "Whybrand")}, I was involved in the Schaltbau rebranding project, being responsible and working hand by hand with the strategy- team on the visual identity.Innovation, high - quality and reliability where the three pillars on which the values and purposes of this industrial company are based. Check the rebrand on the {link("https://news.schaltbau.com/schaltbau-launches-sub-brand-for-growth-markets-energy-and-e-mobility", "schaltbau website")}.
+        </>
         ),
         src: [
           {type: 'image', src: SCHALTBAU}
@@ -142,13 +150,13 @@ const Project = (props) => {
             if (src.type === 'video') {
               return (
                 <article key={index} className={`flex flex-col ${lastItemClass}`}>
-                  <video src={src.src} alt={`project ${projectProps.title}`} autoPlay loop muted />
+                  <video src={src.src} alt={`project ${projectProps.title}`} autoPlay loop muted className={src.className} />
                 </article>
               );
             } else {
               return (
                 <article key={index} className={`flex flex-col ${lastItemClass}`}>
-                  <img src={src.src} alt={`project ${projectProps.title}`} />
+                  <img src={src.src} alt={`project ${projectProps.title}`} className={src.className} />
                 </article>
               );
             }

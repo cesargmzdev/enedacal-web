@@ -16,14 +16,8 @@ html {
   scrollbar-width: none;
 }
 
-@media (min-width: 1536px) {
-  body {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-  }
-
-  #root {
-    max-width: 1536px;
-  }
+body {
+  background-color: black;
+  max-width: 1536px;
+  margin: auto;
 }

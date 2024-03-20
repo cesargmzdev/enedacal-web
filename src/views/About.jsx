@@ -1,19 +1,33 @@
+import {memo} from "react";
 import Menu from "../components/Menu";
 import PORTRAIT from "../assets/about/foto_about.webp";
 import {motion} from "framer-motion";
 import Footer from "../components/Footer";
+import PropTypes from 'prop-types';
+
+const MotionDiv = memo(({children}) => (
+  <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}} className="flex flex-col min-h-screen">
+    {children}
+  </motion.div>
+));
+
+MotionDiv.displayName = 'MotionDiv';
+
+MotionDiv.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 const About = () => {
   return (
-    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>
+    <MotionDiv>
       <Menu />
-      <main className="grid place-items-center p-4 bg-black text-white px-5 py-4 font-Montreal lg:pt-20 xl:pt-32">
+      <main className="grid place-items-center p-4 bg-black text-white px-5 py-4 font-Montreal lg:pt-20 xl:pt-32 flex-grow">
         <div className="flex flex-col lg:flex-row">
           <section className="pt-12 lg:pt-0 lg:flex lg:justify-between lg:flex-col lg:w-2/3">
             <p className="text-balance text-3xl lg:text-5xl xl:text-6xl font-MontrealLight">
               I AM NICO DACAL, A BERLIN-BASED BRAND & VISUAL DESIGNER WITH A CREATIVE MIND AND A PRAGMATIC APPROACH TO USABILITY ISSUES.<br />
               I ENJOY BRINGING IDEAS TO LIFE.</p>
-            <article className="grid grid-cols-3 grid-rows-2 mt-6 gap-6 text-sm text-pretty lg:gap-20 lg:mt-36">
+            <article className="grid grid-cols-3 grid-rows-2 pt-6 gap-6 text-sm text-pretty lg:gap-20 lg:pt-14">
               <p><a href="https://whybrand.com/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline">WHYBRAND</a><br />
                 <a className="hover:text-yellow-500 hover:underline duration-300" href="https://www.privatepier.com/" target="_blank" rel="noopener noreferrer">P.P.I.
                 </a> <br />
@@ -60,8 +74,10 @@ const About = () => {
           </section>
         </div>
       </main>
-      <Footer classNames="pb-9 pt-24 lg:pt-0 xl:pt-24" />
-    </motion.div>
+      <div className="pb-9 pt-9">
+        <Footer />
+      </div>
+    </MotionDiv>
   );
 };
 

@@ -1,34 +1,33 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useCallback} from "react";
 import Menu from "../components/Menu";
 import ProjectCard from "../components/ProjectCard";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
 import Footer from "../components/Footer";
+import BLN from "../assets/projects/Mobile/BLN/BLN_anim_work.mp4";
+import GOM from "../assets/projects/Mobile/GOM/GOM_work.gif";
+import CATA from "../assets/projects/Mobile/CATA/cata_work.webp";
+import MOML from "../assets/projects/Mobile/MOML/MOML_anim.mp4";
+import RUKATYPE from "../assets/projects/Mobile/RUKATYPE/RUKATYPE_work.webp";
+import SCHALTBAU from "../assets/projects/Mobile/SCHALTBAU/SB_work.webp";
 
 const Work = () => {
   const [projects, setProjects] = useState([]);
 
-  useEffect(() => {
-    const loadProjects = async () => {
-      const {default: BLN} = await import("../assets/projects/Mobile/BLN/BLN_anim_work.mp4");
-      const {default: GOM} = await import("../assets/projects/Mobile/GOM/GOM_work.gif");
-      const {default: MDM} = await import("../assets/projects/Mobile/MDM/m_proyecto_work.gif");
-      const {default: MOML} = await import("../assets/projects/Mobile/MOML/MOML_anim.mp4");
-      const {default: RUKATYPE} = await import("../assets/projects/Mobile/RUKATYPE/RUKATYPE_work.webp");
-      const {default: SCHALTBAU} = await import("../assets/projects/Mobile/SCHALTBAU/SB_work.webp");
-
-      setProjects([
-        {path: '/bln', src: BLN, alt: "BLN Project", title: "BLN", isVideo: true},
-        {path: '/gom', src: GOM, alt: "GOM Project", title: "GOM (PPI)"},
-        {path: '/mdm', src: MDM, alt: "MDM Project", title: "MADM"},
-        {path: '/moml', src: MOML, alt: "MOML Project", title: "MOML (KNOM)", isVideo: true},
-        {path: '/rukatype', src: RUKATYPE, alt: "RUKATYPE", title: "RUKATYPE"},
-        {path: '/schaltbau', src: SCHALTBAU, alt: "SCHALTBAU Project", title: "SCHALTBAU (WHYBRAND)"}
-      ]);
-    };
-
-    loadProjects();
+  const loadProjects = useCallback(() => {
+    setProjects([
+      {path: '/bln', src: BLN, alt: "BLN Project", title: "BLN", isVideo: true},
+      {path: '/rukatype', src: RUKATYPE, alt: "RUKATYPE", title: "RUKATYPE"},
+      {path: '/cata', src: CATA, alt: "CATA Project", title: "CATA LA LATA (BANCO SABADELL)"},
+      {path: '/moml', src: MOML, alt: "MOML Project", title: "MOML (KNOM)", isVideo: true},
+      {path: '/gom', src: GOM, alt: "GOM Project", title: "GOM (PPI)"},
+      {path: '/schaltbau', src: SCHALTBAU, alt: "SCHALTBAU Project", title: "SCHALTBAU (WHYBRAND)"}
+    ]);
   }, []);
+
+  useEffect(() => {
+    loadProjects();
+  }, [loadProjects]);
 
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}}>

@@ -53,7 +53,7 @@ const Carousel = ({slides}) => {
   }, [nextSlide, previousSlide]);
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden"
+    <div className="relative h-screen w-screen max-w-[1536px] overflow-hidden"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}>
       {slides.map((slide, index) => {
