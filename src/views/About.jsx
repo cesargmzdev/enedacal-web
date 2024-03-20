@@ -4,6 +4,7 @@ import PORTRAIT from "../assets/about/foto_about.webp";
 import {motion} from "framer-motion";
 import Footer from "../components/Footer";
 import PropTypes from 'prop-types';
+import CV from "/CV_24.pdf?url";
 
 const MotionDiv = memo(({children}) => (
   <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, ease: "easeInOut"}} className="flex flex-col min-h-screen">
@@ -66,7 +67,7 @@ const About = () => {
             <img src={PORTRAIT} alt="profile img" />
             <div className="flex justify-between pt-1 text-2xl lg:text-base">
               <a href="https://www.linkedin.com/in/nicolasdacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">LinkedIn</a><br />
-              <a href="src\assets\about\CV_24.pdf" target="_blank" className="hover:text-yellow-500 hover:underline duration-300">CV</a><br />
+              <a href={CV} target="_blank" rel="noreferrer" className="hover:text-yellow-500 hover:underline duration-300">CV</a><br />
               <a href="https://www.instagram.com/ene_dacal/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500 hover:underline duration-300">IG</a><br />
               <a href="mailto:nicodacalgomez@gmail.com" className="hover:text-yellow-500 hover:underline duration-300">Mail
               </a>
