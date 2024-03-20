@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: 'NeueMontrealRegular';
-  src: url('/fonts/MonumentGrotesk-Regular.ttf') format('opentype');
+  src: url('/fonts/MonumentGrotesk-Regular.woff2');
 }
 
 @font-face {
   font-family: 'NeueMontrealLight';
-  src: url('/fonts/MonumentGrotesk-Regular.ttf') format('opentype');
+  src: url('/fonts/MonumentGrotesk-Regular.woff2');
 }
 
 html {
