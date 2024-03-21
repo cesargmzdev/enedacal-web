@@ -16,12 +16,16 @@ const Work = () => {
 
   const loadProjects = useCallback(() => {
     setProjects([
-      {path: '/bln', src: BLN, alt: "BLN Project", title: "BLN", isVideo: true},
-      {path: '/rukatype', src: RUKATYPE, alt: "RUKATYPE", title: "RUKATYPE"},
-      {path: '/cata', src: CATA, alt: "CATA Project", title: "CATA LA LATA (BANCO SABADELL)"},
-      {path: '/moml', src: MOML, alt: "MOML Project", title: "MOML (KNOM)", isVideo: true},
-      {path: '/gom', src: GOM, alt: "GOM Project", title: "GOM (PPI)"},
-      {path: '/schaltbau', src: SCHALTBAU, alt: "SCHALTBAU Project", title: "SCHALTBAU (WHYBRAND)"}
+      {path: '/bln', src: BLN, alt: "BLN Project", title: "BLN - Rebrand", isVideo: true},
+      {
+        path: '/rukatype', src: RUKATYPE, alt: "RUKATYPE", title: "RUKATYPE - Typography"
+      },
+      {path: '/cata', src: CATA, alt: "CATA Project", title: "CATA LA LATA - Packaging"},
+      {
+        path: '/moml', src: MOML, alt: "MOML Project", title: "MOML (KNOM) - Motion Graph", isVideo: true
+      },
+      {path: '/gom', src: GOM, alt: "GOM Project", title: "GOM (PPI) - Packaging"},
+      {path: '/schaltbau', src: SCHALTBAU, alt: "SCHALTBAU Project", title: "SCHALTBAU (WHYBRAND) - Rebrand"}
     ]);
   }, []);
 
