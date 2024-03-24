@@ -119,7 +119,7 @@ const getProjectProps = (project) => {
       return {
         title: "SCHALTBAU",
         description: (<>
-          During my time in {link("https://whybrand.com/", "Whybrand")}, I was involved in the Schaltbau rebranding project, being responsible and working hand by hand with the strategy- team on the visual identity.Innovation, high - quality and reliability where the three pillars on which the values and purposes of this industrial company are based. Check the rebrand on the {link("https://news.schaltbau.com/schaltbau-launches-sub-brand-for-growth-markets-energy-and-e-mobility", "schaltbau website")}.
+          During my time in {link("https://whybrand.com/", "Whybrand")}, I was involved in the Schaltbau rebranding project, being responsible and working hand by hand with the strategy- team on the visual identity. Innovation, high - quality and reliability were the three pillars on which the values and purposes of this industrial company are based. Check the rebrand on the {link("https://news.schaltbau.com/schaltbau-launches-sub-brand-for-growth-markets-energy-and-e-mobility", "schaltbau website")}.
         </>
         ),
         src: [
