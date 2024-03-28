@@ -46,7 +46,7 @@ const About = () => {
                 Design Asst
               </p>
               <p>2023/24 Berlin <br />
-                2021/22 Berlin <br />
+                2021/23 Berlin <br />
                 2020 Madrid <br />
                 2019 Madrid <br />
                 2016 Berlin

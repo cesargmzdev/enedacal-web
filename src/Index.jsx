@@ -4,6 +4,7 @@ import About from "./views/About";
 import Work from "./views/Work";
 import Project from "./views/Project";
 import ScrollToTop from "./utils/ScrollToTop";
+import Handle404 from "./views/404";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <Route path="/moml" element={<Project project="moml" />} />
         <Route path="/rukatype" element={<Project project="rukatype" />} />
         <Route path="/schaltbau" element={<Project project="schaltbau" />} />
+        <Route path="/*" element={< Handle404 />} />
       </Routes>
     </BrowserRouter>
   );
