@@ -19,6 +19,7 @@ const VideoSlide = ({src, opacityValue, className}) => {
       autoPlay
       loop
       muted
+      playsInline
     />
   );
 };

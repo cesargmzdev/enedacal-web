@@ -5,7 +5,7 @@ const ProjectCard = (props) => {
   if (props.isVideo === true) {
     return (
       <article className={`flex flex-col pb-16`}>
-        <video src={props.src} alt={`project ${props.alt}`} autoPlay loop muted />
+        <video src={props.src} alt={`project ${props.alt}`} autoPlay loop muted playsInline />
         <footer className='flex flex-col font-MontrealLight pt-1'>
           <span className='text-xl md:text-base hover:text-yellow-500 hover:underline duration-300'>{props.title}</span>
         </footer>
