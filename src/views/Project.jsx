@@ -82,12 +82,12 @@ const getProjectProps = (project) => {
           </>
         ),
         src: [
-          {type: 'image', src: CATA0},
+          {type: 'image', src: CATA3},
+          {type: 'image', src: CATA5},
           {type: 'image', src: CATA1},
           {type: 'image', src: CATA2},
-          {type: 'image', src: CATA3},
           {type: 'image', src: CATA4},
-          {type: 'image', src: CATA5}
+          {type: 'image', src: CATA0}
         ]
       };
     case "moml":
