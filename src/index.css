@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'NeueMontrealRegular';
-  src: url('/Fonts/MonumentGrotesk-Regular.woff2');
+  font-family: "NeueMontrealRegular";
+  src: url("/Fonts/MonumentGrotesk-Regular.woff2");
 }
 
 @font-face {
-  font-family: 'NeueMontrealLight';
-  src: url('/Fonts/MonumentGrotesk-Regular.woff2');
+  font-family: "NeueMontrealLight";
+  src: url("/Fonts/MonumentGrotesk-Regular.woff2");
 }
 
 html {

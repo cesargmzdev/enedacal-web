@@ -1,26 +1,31 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const PrevButton = ({onClick}) => {
+const PrevButton = ({ onClick }) => {
   return (
-    <button onClick={onClick} type="button" className='absolute h-full w-1/2 cursor-none' />
+    <button
+      onClick={onClick}
+      type="button"
+      className="absolute h-full w-1/2 cursor-none"
+    />
   );
 };
 
-const NextButton = ({onClick}) => {
+const NextButton = ({ onClick }) => {
   return (
-    <button onClick={onClick} type="button" className='absolute h-full right-0 w-1/2 cursor-none' />
+    <button
+      onClick={onClick}
+      type="button"
+      className="absolute h-full right-0 w-1/2 cursor-none"
+    />
   );
 };
 
 NextButton.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 PrevButton.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
-export {
-  PrevButton,
-  NextButton
-};
+export { PrevButton, NextButton };
