@@ -27,7 +27,7 @@ import RUKATYPE1 from "../assets/projects/Mobile/RUKATYPE/rukaflag.webp";
 import RUKATYPE from "../assets/projects/Desktop/RUKATYPE/RUKATYPE_home.webp";
 import SCHALTBAU from "../assets/projects/Desktop/SCHALTBAU/SB_home.webp";
 import AMRS from "../assets/projects/Desktop/AMRS/AMRS.mp4";
-import BST from "../assets/projects/Desktop/BST/BST_logo_home.gif";
+import BST from "../assets/projects/Desktop/BST/BST_logo_home.mp4";
 
 const link = (link, string) => {
   return (
@@ -215,7 +215,7 @@ const getProjectProps = (project) => {
             )}
           </>
         ),
-        src: [{ type: "image", src: BST }],
+        src: [{ type: "video", src: BST }],
       };
   }
 };
