@@ -11,7 +11,7 @@ const MotionDiv = memo(({ children }) => (
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 1, ease: "easeInOut" }}
-    className="flex flex-col min-h-screen"
+    className="flex min-h-screen flex-col"
   >
     {children}
   </motion.div>
@@ -27,16 +27,16 @@ const About = () => {
   return (
     <MotionDiv>
       <Menu />
-      <main className="grid place-items-center p-4 bg-black text-white px-5 py-4 font-Montreal lg:pt-20 xl:pt-32 flex-grow">
-        <div className="flex flex-col lg:flex-row">
-          <section className="pt-12 lg:pt-0 lg:flex lg:justify-between lg:flex-col lg:w-2/3">
-            <p className="text-balance text-2xl lg:text-4xl xl:text-5xl font-MontrealLight">
+      <main className="grid flex-grow place-items-center bg-black p-4 px-5 py-4 font-Montreal text-white lg:pt-20 xl:pt-32">
+        <div className="flex flex-col lg:flex-row lg:justify-between">
+          <section className="pt-12 lg:flex lg:w-2/3 lg:flex-col lg:justify-between lg:pt-0">
+            <p className="text-balance font-MontrealLight text-2xl lg:text-4xl xl:text-5xl">
               I AM NICO DACAL, A BERLIN-BASED BRAND &amp; VISUAL DESIGNER. I
               ENJOY BRINGING IDEAS TO LIFE AND CONSIDER MYSELF AS A BRIDGE
               BETWEEN A CLIENT&rsquo;S NEEDS AND THEIR EXTERNAL COMMUNICATION
               THROUGH GRAPHIC SOLUTIONS.
             </p>
-            <article className="grid grid-cols-3 grid-rows-2 pt-6 gap-6 text-sm text-pretty lg:gap-20 lg:pt-14">
+            <div className="grid grid-cols-3 grid-rows-2 gap-6 text-pretty pt-14 text-xs lg:gap-20 lg:pt-14 lg:text-base">
               <p>
                 <a
                   href="https://whybrand.com/"
@@ -48,7 +48,7 @@ const About = () => {
                 </a>
                 <br />
                 <a
-                  className="hover:text-yellow-500 hover:underline duration-300"
+                  className="duration-300 hover:text-yellow-500 hover:underline"
                   href="https://www.privatepier.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -57,7 +57,7 @@ const About = () => {
                 </a>{" "}
                 <br />
                 <a
-                  className="hover:text-yellow-500 hover:underline duration-300"
+                  className="duration-300 hover:text-yellow-500 hover:underline"
                   href="https://knom.es/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -66,7 +66,7 @@ const About = () => {
                 </a>{" "}
                 <br />
                 <a
-                  className="hover:text-yellow-500 hover:underline duration-300"
+                  className="duration-300 hover:text-yellow-500 hover:underline"
                   href="https://dimad.org/en/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -75,7 +75,7 @@ const About = () => {
                 </a>{" "}
                 <br />
                 <a
-                  className="hover:text-yellow-500 hover:underline duration-300"
+                  className="duration-300 hover:text-yellow-500 hover:underline"
                   href="https://www.frank-ad.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -97,18 +97,33 @@ const About = () => {
                 2019 Madrid <br />
                 2016 Berlin
               </p>
-              <p>
+              <p className="flex flex-col lg:justify-end">
                 <a
-                  className="hover:text-yellow-500 hover:underline duration-300"
+                  className="hidden duration-300 hover:text-yellow-500 hover:underline lg:block"
+                  href="https://www.spiced-academy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  SPICED Academy
+                </a>
+                <a
+                  className="duration-300 hover:text-yellow-500 hover:underline lg:hidden"
+                  href="https://www.spiced-academy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  SPICED
+                </a>
+                <a
+                  className="duration-300 hover:text-yellow-500 hover:underline"
                   href="https://esdmadrid.es/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   ELISAVA
-                </a>{" "}
-                <br />
+                </a>
                 <a
-                  className="hover:text-yellow-500 hover:underline duration-300"
+                  className="duration-300 hover:text-yellow-500 hover:underline"
                   href="https://weareshifta.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -116,24 +131,26 @@ const About = () => {
                   E.S.D.
                 </a>
               </p>
-              <p>
+              <p className="lg:flex lg:flex-col lg:justify-end">
+                Bootcamp <br />
                 MA Branding <br />
                 BA Design
               </p>
-              <p>
+              <p className="lg:flex lg:flex-col lg:justify-end">
+                2024 Berlin <br />
                 2022/23 Online <br />
                 2016/20 Madrid
               </p>
-            </article>
+            </div>
           </section>
-          <section className="text-sm lg:w-1/3 lg:pl-14 lg:pt-8">
+          <section>
             <img src={PORTRAIT} alt="profile img" />
-            <div className="flex justify-between pt-1 text-2xl lg:text-base">
+            <div className="flex justify-between pt-1 lg:text-base">
               <a
                 href="https://www.linkedin.com/in/nicolasdacal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-yellow-500 hover:underline duration-300"
+                className="duration-300 hover:text-yellow-500 hover:underline"
               >
                 LinkedIn
               </a>
@@ -142,7 +159,7 @@ const About = () => {
                 href={CV}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-yellow-500 hover:underline duration-300"
+                className="duration-300 hover:text-yellow-500 hover:underline"
               >
                 CV
               </a>
@@ -151,14 +168,14 @@ const About = () => {
                 href="https://www.instagram.com/ene_dacal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-yellow-500 hover:underline duration-300"
+                className="duration-300 hover:text-yellow-500 hover:underline"
               >
                 IG
               </a>
               <br />
               <a
                 href="mailto:nicodacalgomez@gmail.com"
-                className="hover:text-yellow-500 hover:underline duration-300"
+                className="duration-300 hover:text-yellow-500 hover:underline"
               >
                 Mail
               </a>

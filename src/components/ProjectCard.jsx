@@ -13,8 +13,8 @@ const ProjectCard = (props) => {
           playsInline
           className={`${props.media_classNames}`}
         />
-        <footer className="flex flex-col font-MontrealLight pt-1">
-          <span className="text-xl md:text-base hover:text-yellow-500 hover:underline duration-300">
+        <footer className="flex flex-col pt-1 font-MontrealLight">
+          <span className="text-xl duration-300 hover:text-yellow-500 hover:underline md:text-base">
             {props.title}
           </span>
         </footer>
@@ -28,8 +28,8 @@ const ProjectCard = (props) => {
           alt={`project ${props.alt}`}
           className={`${props.media_classNames}`}
         />
-        <footer className="flex flex-col font-MontrealLight pt-1">
-          <span className="text-xl md:text-base hover:text-yellow-500 hover:underline duration-300">
+        <footer className="flex flex-col pt-1 font-MontrealLight">
+          <span className="text-xl duration-300 hover:text-yellow-500 hover:underline md:text-base">
             {props.title}
           </span>
         </footer>

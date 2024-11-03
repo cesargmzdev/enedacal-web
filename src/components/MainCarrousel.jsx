@@ -59,7 +59,7 @@ const Carousel = ({ slides }) => {
 
   return (
     <div
-      className="relative h-screen w-screen max-w-[1536px] overflow-hidden"
+      className="relative h-dvh w-dvw overflow-hidden"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -83,7 +83,7 @@ const Carousel = ({ slides }) => {
         if (slide.type === "image") {
           return (
             <div
-              className={`absolute top-0 h-dvh w-dvw max-w-screen-2xl transition-all duration-500 ease-in-out transform ${transformValue}`}
+              className={`absolute top-0 h-dvh w-dvw transform transition-all duration-500 ease-in-out ${transformValue}`}
               style={{ opacity: opacityValue }} // Apply the opacity
               key={slide.src} // Use slide src as key
             >
@@ -97,7 +97,7 @@ const Carousel = ({ slides }) => {
         } else if (slide.type === "video") {
           return (
             <div
-              className={`absolute top-0 h-dvh w-dvw max-w-screen-2xl transition-all duration-500 ease-in-out transform ${transformValue}`}
+              className={`absolute top-0 h-dvh w-dvw transform transition-all duration-500 ease-in-out ${transformValue}`}
               style={{ opacity: opacityValue }} // Apply the opacity
               key={slide.src} // Use slide src as key
             >

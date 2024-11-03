@@ -61,19 +61,19 @@ const CarouselCursor = ({ direction }) => {
   if (direction === "right") {
     return (
       <div
-        className="w-[125px] h-[85px] mix-blend-difference fixed z-10 pointer-events-none"
+        className="pointer-events-none fixed z-10 h-[85px] w-[125px] mix-blend-difference"
         ref={cursorRef}
       >
-        <div className="bg-RightArrow absolute top-0 left-0 w-full h-full bg-contain bg-center bg-no-repeat" />
+        <div className="absolute left-0 top-0 h-full w-full bg-RightArrow bg-contain bg-center bg-no-repeat" />
       </div>
     );
   } else if (direction === "left") {
     return (
       <div
-        className="w-[125px] h-[85px] mix-blend-difference fixed z-10 pointer-events-none"
+        className="pointer-events-none fixed z-10 h-[85px] w-[125px] mix-blend-difference"
         ref={cursorRef}
       >
-        <div className="bg-LeftArrow absolute top-0 left-0 w-full h-full bg-contain bg-center bg-no-repeat" />
+        <div className="absolute left-0 top-0 h-full w-full bg-LeftArrow bg-contain bg-center bg-no-repeat" />
       </div>
     );
   }

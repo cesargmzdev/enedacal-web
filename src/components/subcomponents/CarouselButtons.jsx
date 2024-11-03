@@ -15,7 +15,7 @@ const NextButton = ({ onClick }) => {
     <button
       onClick={onClick}
       type="button"
-      className="absolute h-full right-0 w-1/2 cursor-none"
+      className="absolute right-0 h-full w-1/2 cursor-none"
     />
   );
 };

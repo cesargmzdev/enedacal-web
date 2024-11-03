@@ -32,7 +32,7 @@ import BST from "../assets/projects/Desktop/BST/BST_logo_home.mp4";
 const link = (link, string) => {
   return (
     <a
-      className="underline hover:text-yellow-500 hover:underline duration-300"
+      className="underline duration-300 hover:text-yellow-500 hover:underline"
       href={`${link}`}
       target="_blank"
       rel="noreferrer"
@@ -232,10 +232,10 @@ const Project = (props) => {
       <Menu />
       <main className="bg-black text-white">
         <section className="p-5 py-10 pt-16 font-MontrealLight">
-          <p className="underline pb-9 text-2xl md:text-base">
+          <p className="pb-9 text-2xl underline md:text-base">
             {projectProps.title}
           </p>
-          <p className="text-2xl lg:text-base lg:w-[50%] text-balance">
+          <p className="text-balance text-2xl lg:w-[50%] lg:text-base">
             {projectProps.description}
           </p>
         </section>

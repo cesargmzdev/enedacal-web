@@ -13,15 +13,15 @@ const CookieModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed bottom-0 right-0 p-4 flex items-center justify-center z-50">
-      <div className="bg-white p-4 rounded shadow-lg text-black">
+    <div className="fixed bottom-0 right-0 z-50 flex items-center justify-center p-4">
+      <div className="rounded bg-white p-4 text-black shadow-lg">
         <h2 className="mb-4">This website uses cookies</h2>
         <p className="mb-4">
           We use cookies to ensure you get the best experience on our website.
         </p>
         <button
           onClick={handleAccept}
-          className="bg-black text-white px-4 py-2 rounded"
+          className="rounded bg-black px-4 py-2 text-white"
         >
           Accept
         </button>

@@ -2,21 +2,21 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <header className="fixed max-w-screen-2xl w-full flex justify-between z-50 mix-blend-difference">
+    <header className="fixed z-50 flex w-dvw justify-around mix-blend-difference">
       <Link
-        className="text-white p-5 text-base hover:text-yellow-500 hover:underline duration-300"
+        className="p-5 text-base text-white duration-300 hover:text-yellow-500 hover:underline"
         to={"/"}
       >
         <strong className="font-Montreal">ENEDACAL</strong>
       </Link>
       <Link
         to={"/work"}
-        className="text-white p-5 text-base hover:text-yellow-500 hover:underline duration-300"
+        className="p-5 text-base text-white duration-300 hover:text-yellow-500 hover:underline"
       >
         <strong className="font-Montreal">WORK</strong>
       </Link>
       <Link
-        className="text-white p-5 text-base hover:text-yellow-500 hover:underline duration-300"
+        className="p-5 text-base text-white duration-300 hover:text-yellow-500 hover:underline"
         to={"/about"}
       >
         <strong className="font-Montreal">ABOUT</strong>

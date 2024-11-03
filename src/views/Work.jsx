@@ -83,7 +83,7 @@ const Work = () => {
       transition={{ duration: 1, ease: "easeInOut" }}
     >
       <Menu />
-      <main className="bg-black text-white px-5 font-Montreal pt-20 lg:grid lg:grid-cols-3 lg:gap-3 lg:pt-[7.5rem]">
+      <main className="bg-black px-5 pt-20 font-Montreal text-white lg:grid lg:grid-cols-3 lg:gap-3 lg:pt-[7.5rem]">
         {projects.map((project) => (
           <Link to={project.path} key={project.title}>
             <ProjectCard
