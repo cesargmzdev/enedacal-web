@@ -132,7 +132,7 @@ const About = () => {
                 </a>
               </p>
               <p className="lg:flex lg:flex-col lg:justify-end">
-                Bootcamp <br />
+                UX/UI Bootcamp <br />
                 MA Branding <br />
                 BA Design
               </p>
