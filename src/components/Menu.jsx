@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <header className="fixed z-50 flex w-dvw justify-around mix-blend-difference">
+    <header className="fixed z-50 flex w-dvw justify-between mix-blend-difference">
       <Link
         className="p-5 text-base text-white duration-300 hover:text-yellow-500 hover:underline"
         to={"/"}
