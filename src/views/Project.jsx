@@ -220,7 +220,7 @@ const getProjectProps = (project) => {
       };
     case "kpg":
       return {
-        title: "KPG",
+        title: "KPG (WHYBRAND) - UX/UI Design",
         description: (
           <>
             Another project I was involved in during my time in Whybrand was the

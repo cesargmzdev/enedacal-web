@@ -74,7 +74,7 @@ const Work = () => {
         path: "/kpg",
         src: KPG,
         alt: "KPG Project",
-        title: "KPG",
+        title: "KPG (WHYBRAND) - UX/UI Design",
         isVideo: true,
       },
     ]);
