@@ -15,6 +15,7 @@ import MOML_desktop from "./assets/projects/Desktop/MOML/knom.mp4";
 import RUKATYPE_desktop from "./assets/projects/Desktop/RUKATYPE/RUKATYPE_home.webp";
 import AMRS from "./assets/projects/Desktop/AMRS/AMRS.mp4";
 import BST from "./assets/projects/Desktop/BST/BST_logo_home.mp4";
+import KPG from "./assets/projects/Mobile/KPG/KPG_work.mp4";
 
 const App = () => {
   const [direction, setDirection] = useState("");
@@ -32,6 +33,7 @@ const App = () => {
         { type: "video", src: BLN_mobile, className: "object-cover" },
         { type: "image", src: CATA_mobile, className: "object-cover" },
         { type: "video", src: AMRS, className: "object-cover" },
+        { type: "video", src: KPG },
       ];
     } else {
       slides = [
@@ -42,6 +44,7 @@ const App = () => {
         { type: "video", src: BLN_desktop, className: "object-cover" },
         { type: "image", src: CATA_desktop, className: "object-cover" },
         { type: "video", src: AMRS, className: "object-cover" },
+        { type: "video", src: KPG },
       ];
     }
     setSlides(slides);
