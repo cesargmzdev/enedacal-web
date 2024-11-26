@@ -12,7 +12,7 @@ import RUKATYPE from "../assets/projects/Mobile/RUKATYPE/RUKATYPE_work.webp";
 import SCHALTBAU from "../assets/projects/Mobile/SCHALTBAU/SB_work.webp";
 import AMRS from "../assets/projects/Mobile/AMRS/AMRS_work.webp";
 import BST from "../assets/projects/Mobile/BST/BST_work.mp4";
-import KPG from "../assets/projects/Mobile/KPG/KPG_work.mp4";
+// import KPG from "../assets/projects/Mobile/KPG/KPG_work.mp4";
 
 const Work = () => {
   const [projects, setProjects] = useState([]);
@@ -70,13 +70,13 @@ const Work = () => {
         alt: "AMRS Project",
         title: "AMRS (KNOM) - Motion Graph",
       },
-      {
-        path: "/kpg",
-        src: KPG,
-        alt: "KPG Project",
-        title: "KPG (WHYBRAND) - UX/UI Design",
-        isVideo: true,
-      },
+      // {
+      //   path: "/kpg",
+      //   src: KPG,
+      //   alt: "KPG Project",
+      //   title: "KPG (WHYBRAND) - UX/UI Design",
+      //   isVideo: true,
+      // },
     ]);
   }, []);
 

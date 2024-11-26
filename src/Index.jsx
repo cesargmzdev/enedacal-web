@@ -23,7 +23,7 @@ const Index = () => {
         <Route path="/schaltbau" element={<Project project="schaltbau" />} />
         <Route path="/amrs" element={<Project project="amrs" />} />
         <Route path="/bst" element={<Project project="bst" />} />
-        <Route path="/kpg" element={<Project project="kpg" />} />
+        {/* <Route path="/kpg" element={<Project project="kpg" />} /> */}
         <Route path="/*" element={<Handle404 />} />
       </Routes>
     </BrowserRouter>

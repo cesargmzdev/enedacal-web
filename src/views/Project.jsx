@@ -28,7 +28,7 @@ import RUKATYPE from "../assets/projects/Desktop/RUKATYPE/RUKATYPE_home.webp";
 import SCHALTBAU from "../assets/projects/Desktop/SCHALTBAU/SB_home.webp";
 import AMRS from "../assets/projects/Desktop/AMRS/AMRS.mp4";
 import BST from "../assets/projects/Desktop/BST/BST_logo_home.mp4";
-import KPG from "../assets/projects/Mobile/KPG/KPG_work.mp4";
+// import KPG from "../assets/projects/Mobile/KPG/KPG_work.mp4";
 
 const link = (link, string) => {
   return (
@@ -218,30 +218,30 @@ const getProjectProps = (project) => {
         ),
         src: [{ type: "video", src: BST }],
       };
-    case "kpg":
-      return {
-        title: "KPG (WHYBRAND) - UX/UI Design",
-        description: (
-          <>
-            Another project I was involved in during my time in Whybrand was the
-            redesign of the KPG-rs website. This client specializes in the
-            design and engineering of drives and generators, encompassing
-            precision manufacturing of components and gearboxes, as well as
-            maintenance and service. <br /> <br /> My role in this project was
-            primarily focused on crafting the UX/UI design, ensuring the
-            website&rsquo;s adaptability across various formats and
-            incorporating responsive breakpoints to guarantee optimal
-            functionality on all current digital devices. <br /> <br /> Here is
-            the current{" "}
-            {link(
-              "https://zeroheight.com/52b028991/p/878897-banc-de-sang-i-teixits",
-              "website",
-            )}
-            .
-          </>
-        ),
-        src: [{ type: "video", src: KPG, className: "h-screen" }],
-      };
+    // case "kpg":
+    //   return {
+    //     title: "KPG (WHYBRAND) - UX/UI Design",
+    //     description: (
+    //       <>
+    //         Another project I was involved in during my time in Whybrand was the
+    //         redesign of the KPG-rs website. This client specializes in the
+    //         design and engineering of drives and generators, encompassing
+    //         precision manufacturing of components and gearboxes, as well as
+    //         maintenance and service. <br /> <br /> My role in this project was
+    //         primarily focused on crafting the UX/UI design, ensuring the
+    //         website&rsquo;s adaptability across various formats and
+    //         incorporating responsive breakpoints to guarantee optimal
+    //         functionality on all current digital devices. <br /> <br /> Here is
+    //         the current{" "}
+    //         {link(
+    //           "https://zeroheight.com/52b028991/p/878897-banc-de-sang-i-teixits",
+    //           "website",
+    //         )}
+    //         .
+    //       </>
+    //     ),
+    //     src: [{ type: "video", src: KPG, className: "h-screen" }],
+    //   };
   }
 };
 
