@@ -1,6 +1,6 @@
 import { memo } from "react";
 import Menu from "../components/Menu";
-import PORTRAIT from "../assets/about/foto_about2.webp";
+import PORTRAIT from "../assets/about/Foto_about2.webp";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
