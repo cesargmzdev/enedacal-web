@@ -28,6 +28,14 @@ import RUKATYPE from "../assets/projects/Desktop/RUKATYPE/RUKATYPE_home.webp";
 import SCHALTBAU from "../assets/projects/Desktop/SCHALTBAU/SB_home.webp";
 import AMRS from "../assets/projects/Desktop/AMRS/AMRS.mp4";
 import BST from "../assets/projects/Desktop/BST/BST_logo_home.mp4";
+import TRAIL_VIDEO from "../assets/projects/Mobile/TRAIL11/Trail11y_video.mp4";
+import TRAIL2 from "../assets/projects/Mobile/TRAIL11/Trail2.webp";
+import TRAIL3 from "../assets/projects/Mobile/TRAIL11/Trail3.webp";
+import TRAIL4 from "../assets/projects/Mobile/TRAIL11/Trail4.webp";
+import TRAIL5 from "../assets/projects/Mobile/TRAIL11/Trail5.webp";
+import TRAIL6 from "../assets/projects/Mobile/TRAIL11/Trail6.webp";
+import TRAIL7 from "../assets/projects/Mobile/TRAIL11/Trail7.webp";
+import TRAIL8 from "../assets/projects/Mobile/TRAIL11/Trail8.webp";
 // import KPG from "../assets/projects/Mobile/KPG/KPG_work.mp4";
 
 const link = (link, string) => {
@@ -217,6 +225,28 @@ const getProjectProps = (project) => {
           </>
         ),
         src: [{ type: "video", src: BST }],
+      };
+    case "trail11":
+      return {
+        title: "Trail11y - UX/UI Design",
+        description: (
+          <>
+            Trail11y is a mobile app designed to make hiking accessible for all.
+            It provides detailed, reliable, and community-driven information
+            about trails, focusing on accessibility, real-time updates, and an
+            intuitive user experience.
+          </>
+        ),
+        src: [
+          { type: "video", src: TRAIL_VIDEO },
+          { type: "image", src: TRAIL2 },
+          { type: "image", src: TRAIL3 },
+          { type: "image", src: TRAIL4 },
+          { type: "image", src: TRAIL5 },
+          { type: "image", src: TRAIL6 },
+          { type: "image", src: TRAIL7 },
+          { type: "image", src: TRAIL8 },
+        ],
       };
     // case "kpg":
     //   return {

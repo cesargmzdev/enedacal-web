@@ -1,6 +1,6 @@
 import { memo } from "react";
 import Menu from "../components/Menu";
-import PORTRAIT from "../assets/about/foto_about.webp";
+import PORTRAIT from "../assets/about/foto_about2.webp";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
@@ -31,10 +31,13 @@ const About = () => {
         <div className="flex flex-col lg:flex-row lg:justify-between">
           <section className="pt-12 lg:flex lg:w-2/3 lg:flex-col lg:justify-between lg:pt-0">
             <p className="text-balance font-MontrealLight text-2xl lg:text-4xl xl:text-5xl">
-              I AM NICO DACAL, A BERLIN-BASED BRAND &amp; VISUAL DESIGNER. I
-              ENJOY BRINGING IDEAS TO LIFE AND CONSIDER MYSELF AS A BRIDGE
-              BETWEEN A CLIENT&rsquo;S NEEDS AND THEIR EXTERNAL COMMUNICATION
-              THROUGH GRAPHIC SOLUTIONS.
+              I am Nico Dacal, a Berlin-based brand designer with UX/UI
+              expertise. With a strong background in branding studios, I craft
+              visual solutions that connect client needs with impactful design.{" "}
+              <br />
+              Focused on user-centered experiences, I blend strategy and
+              creativity to solve problems through thoughtful, engaging, and
+              effective design.
             </p>
             <div className="grid grid-cols-3 grid-rows-2 gap-6 text-pretty pt-14 text-xs lg:gap-20 lg:pt-14 lg:text-base">
               <p>
@@ -137,14 +140,18 @@ const About = () => {
                 BA Design
               </p>
               <p className="lg:flex lg:flex-col lg:justify-end">
-                2024 Berlin <br />
+                2024/25 Berlin <br />
                 2022/23 Online <br />
                 2016/20 Madrid
               </p>
             </div>
           </section>
           <section>
-            <img src={PORTRAIT} alt="profile img" />
+            <img
+              src={PORTRAIT}
+              alt="profile img"
+              className="w-[600px] rounded-lg"
+            />
             <div className="flex justify-between pt-1 lg:text-base">
               <a
                 href="https://www.linkedin.com/in/nicolasdacal/"
@@ -162,15 +169,6 @@ const About = () => {
                 className="duration-300 hover:text-yellow-500 hover:underline"
               >
                 CV
-              </a>
-              <br />
-              <a
-                href="https://www.instagram.com/ene_dacal/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="duration-300 hover:text-yellow-500 hover:underline"
-              >
-                IG
               </a>
               <br />
               <a

@@ -15,6 +15,7 @@ import MOML_desktop from "./assets/projects/Desktop/MOML/knom.mp4";
 import RUKATYPE_desktop from "./assets/projects/Desktop/RUKATYPE/RUKATYPE_home.webp";
 import AMRS from "./assets/projects/Desktop/AMRS/AMRS.mp4";
 import BST from "./assets/projects/Desktop/BST/BST_logo_home.mp4";
+import TRAIL11 from "./assets/projects/Mobile/TRAIL11/Trail1.webp";
 // import KPG from "./assets/projects/Mobile/KPG/KPG_work.mp4";
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
     let slides;
     if (isMobile) {
       slides = [
+        { type: "image", src: TRAIL11, className: "object-cover" },
         { type: "image", src: RUKATYPE_mobile, className: "object-cover" },
         { type: "video", src: BST, className: "object-cover" },
         { type: "video", src: MOML_mobile },
@@ -37,6 +39,7 @@ const App = () => {
       ];
     } else {
       slides = [
+        { type: "image", src: TRAIL11, className: "object-cover" },
         { type: "image", src: RUKATYPE_desktop, className: "object-cover" },
         { type: "video", src: BST, className: "object-cover" },
         { type: "video", src: MOML_desktop },
@@ -74,7 +77,7 @@ const App = () => {
     >
       <Menu />
       <main>
-        <CarouselCursor direction={direction} isVisible={true} />
+        <CarouselCursor direction={direction} />
         <Carousel slides={slides} />
       </main>
     </motion.div>

@@ -11,7 +11,7 @@ const ProjectCard = (props) => {
           loop
           muted
           playsInline
-          className={`${props.media_classNames}`}
+          className={`rounded-lg ${props.media_classNames}`}
         />
         <footer className="flex flex-col pt-1 font-MontrealLight">
           <span className="text-xl duration-300 hover:text-yellow-500 hover:underline md:text-base">
@@ -26,7 +26,7 @@ const ProjectCard = (props) => {
         <img
           src={props.src}
           alt={`project ${props.alt}`}
-          className={`${props.media_classNames}`}
+          className={`rounded-lg ${props.media_classNames}`}
         />
         <footer className="flex flex-col pt-1 font-MontrealLight">
           <span className="text-xl duration-300 hover:text-yellow-500 hover:underline md:text-base">

@@ -12,6 +12,7 @@ import RUKATYPE from "../assets/projects/Mobile/RUKATYPE/RUKATYPE_work.webp";
 import SCHALTBAU from "../assets/projects/Mobile/SCHALTBAU/SB_work.webp";
 import AMRS from "../assets/projects/Mobile/AMRS/AMRS_work.webp";
 import BST from "../assets/projects/Mobile/BST/BST_work.mp4";
+import TRAIL11 from "../assets/projects/Mobile/TRAIL11/Trail_mobile.webp";
 // import KPG from "../assets/projects/Mobile/KPG/KPG_work.mp4";
 
 const Work = () => {
@@ -19,6 +20,12 @@ const Work = () => {
 
   const loadProjects = useCallback(() => {
     setProjects([
+      {
+        path: "/trail11",
+        src: TRAIL11,
+        alt: "TRAIL11 Project",
+        title: "TRAIL11Y - UX/UI Design",
+      },
       {
         path: "/rukatype",
         src: RUKATYPE,
