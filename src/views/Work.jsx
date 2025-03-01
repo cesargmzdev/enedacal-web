@@ -9,7 +9,7 @@ import GOM from "../assets/projects/Mobile/GOM/GOM_work.gif";
 import CATA from "../assets/projects/Mobile/CATA/cata_work.webp";
 import MOML from "../assets/projects/Mobile/MOML/MOML_anim.mp4";
 import RUKATYPE from "../assets/projects/Mobile/RUKATYPE/RUKATYPE_work.webp";
-import SCHALTBAU from "../assets/projects/Mobile/SCHALTBAU/SB_work.webp";
+import SCHALTBAU from "../assets/projects/Mobile/SCHALTBAU/SB_work.mp4";
 import AMRS from "../assets/projects/Mobile/AMRS/AMRS_work.webp";
 import BST from "../assets/projects/Mobile/BST/BST_work.mp4";
 import TRAIL11 from "../assets/projects/Mobile/TRAIL11/Trail_mobile.webp";
@@ -37,6 +37,7 @@ const Work = () => {
         src: SCHALTBAU,
         alt: "SCHALTBAU Project",
         title: "SCHALTBAU (WHYBRAND) - Rebrand",
+        isVideo: true,
       },
       {
         path: "/bst",
